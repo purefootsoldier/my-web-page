@@ -1,11 +1,12 @@
 <template>
-  <section class="mis-hobbies">
+  <section class="mis-hobbies" ref="hobbiesSection">
     <h2 class="section-title">
       <i class="pi pi-star-fill mr-2"></i>
       My Hobbies
     </h2>
 
-    <div v-for="(hobby, index) in hobbies" :key="index" class="hobby-row" :class="`delay-${index}`">
+    <div v-for="(hobby, index) in hobbies" :key="index" v-motion
+      :initial="{ opacity: 0, y: 100 }" :visible="{ opacity: 1, y: 0 }" :delay="index * 200" class="hobby-row">
       <div class="icon">
         <i :class="hobby.icon"></i>
       </div>
@@ -16,8 +17,15 @@
     </div>
   </section>
 </template>
-
+<!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
+import { ref } from "vue";
+import { useMotion } from "@vueuse/motion";
+const hobbiesSection = ref(null);
+useMotion(hobbiesSection, {
+  initial: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1 } }
+});
 const hobbies = [
   {
     titulo: '3D Modeling',
@@ -60,9 +68,6 @@ const hobbies = [
   gap: 1.5rem;
   padding: 2rem 1rem;
   border-bottom: 1px solid #333;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 0.6s forwards;
 }
 
 .delay-0 {

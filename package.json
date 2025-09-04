@@ -1,9 +1,11 @@
 {
+  
   "name": "test",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
@@ -25,6 +27,7 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.20.1",
     "eslint-plugin-vue": "^9.32.0",
+    "gh-pages": "^6.3.0",
     "jiti": "^2.4.2",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.5.1",

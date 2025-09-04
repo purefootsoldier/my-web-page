@@ -1,23 +1,22 @@
-<script setup lang="ts">
-import { Button } from 'primevue';
-import Hero from './components/sections/Hero.vue';
-import Header from './components/global/Header.vue';
-import Social from './components/sections/Social.vue';
-import Footer from './components/global/Footer.vue';
-import AboutMe from './components/sections/AboutMe.vue';
-import MisProyectos from './components/sections/MisProyectos.vue';
-import MisHobbies from './components/sections/MisHobbies.vue';
-</script>
-
 <template>
-  <Header/>   
+  <MyHeader/>
   <main>
-    <Hero/>
-    <Social/>
+    <MyHero/>
+    <MySocial/>
     <AboutMe/>
-    <MisProyectos/>
-    <MisHobbies/>
+    <MyProjects/>
+    <MyHobbies/>
   </main>
-  <Footer/>
-  
+  <MyFooter/>
+
 </template>
+<!-- eslint-disable-next-line vue/block-lang -->
+<script setup>
+import MyHero from './components/sections/MyHero.vue';
+import MyHeader from './components/global/MyHeader.vue';
+import MySocial from './components/sections/MySocials.vue';
+import MyFooter from './components/global/MyFooter.vue';
+import AboutMe from './components/sections/AboutMe.vue';
+import MyProjects from './components/sections/MyProjects.vue';
+import MyHobbies from './components/sections/MyHobbies.vue';
+</script>

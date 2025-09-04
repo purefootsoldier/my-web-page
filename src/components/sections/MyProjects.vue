@@ -26,7 +26,7 @@
     </div>
   </section>
 </template>
-
+<!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
 import { ref } from 'vue'
 import Card from 'primevue/card'

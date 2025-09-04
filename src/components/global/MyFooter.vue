@@ -22,7 +22,7 @@
         </div>
     </footer>
 </template>
-
+<!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
 </script>
 

@@ -17,16 +17,15 @@
       </nav>
     </header>
   </template>
-
+<!-- eslint-disable-next-line vue/block-lang -->
   <script setup>
-  import { ref } from 'vue';
 
-  const darkMode = ref(false);
+  /*const darkMode = ref(false);
 
   const toggleDarkMode = () => {
     darkMode.value = !darkMode.value;
     document.body.classList.toggle('dark-mode', darkMode.value);
-  };;
+  };*/
   </script>
 
   <style scoped>

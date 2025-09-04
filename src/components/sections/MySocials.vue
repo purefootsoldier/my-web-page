@@ -1,3 +1,29 @@
+<template>
+  <section class="social-section" ref="sectionRef">
+    <h2>Follow me on my socials</h2>
+    <div class="social-cards">
+      <Card v-for="(social, index) in socials" :key="social.name" class="p-card" v-motion
+        :initial="{ opacity: 0, y: 100 }" :visible="{ opacity: 1, y: 0 }" :delay="index * 200">
+        <template #header>
+          <div class="social-icon">
+            <i :class="social.icon"></i>
+          </div>
+        </template>
+        <template #title>
+          {{ social.name }}
+        </template>
+        <template #content>
+          <p>{{ social.description }}</p>
+        </template>
+        <template #footer>
+          <Button :label="'Ir a ' + social.name" :icon="social.icon" :href="social.link" target="_blank" />
+        </template>
+      </Card>
+    </div>
+  </section>
+</template>
+
+<!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
 import { ref } from "vue";
 import { useMotion } from "@vueuse/motion";
@@ -42,32 +68,6 @@ const socials = [
 ]
 
 </script>
-<template>
-  <section class="social-section" ref="sectionRef">
-    <h2>Follow me on my social's</h2>
-    <div class="social-cards">
-      <Card v-for="(social, index) in socials" :key="social.name" class="p-card" v-motion
-        :initial="{ opacity: 0, y: 100 }" :visible="{ opacity: 1, y: 0 }" :delay="index * 200">
-        <template #header>
-          <div class="social-icon">
-            <i :class="social.icon"></i>
-          </div>
-        </template>
-        <template #title>
-          {{ social.name }}
-        </template>
-        <template #content>
-          <p>{{ social.description }}</p>
-        </template>
-        <template #footer>
-          <Button :label="'Ir a ' + social.name" :icon="social.icon" :href="social.link" target="_blank" />
-        </template>
-      </Card>
-    </div>
-  </section>
-</template>
-
-
 
 <style scoped>
 .social-section {

@@ -3,30 +3,36 @@
     <div class="fixed-bg-container">
       <video autoplay loop muted playsinline class="hero-video">
         <source src="../../assets/yt1z.net - BATTLETECH - Intro Cinematic (720p).mp4" type="video/mp4">
-        Tu navegador no soporta videos.
       </video>
     </div>
     <div class="video-overlay"></div>
+    <div class="corner-image">
+      <p>image by pablo stanley</p>
+      <img src="../../assets/Transhumans - Astro.png" alt="" >
+    </div>
     <div class="hero-content">
       <div class="welcome">
-        <h1>👋 Hey there, welcome to my personal space.</h1>
+        <h1> Hey there, welcome to my personal space.</h1>
         <p>
           Here I share my projects, ideas, and insights from my journey in software development, along with bits of my
           professional and creative life.
 
           This blog is also a place to connect: you can explore what I’m working on, get a glimpse of my background, and
-          reach out if you’d like to collaborate—or just chat about new ideas. 🚀
+          reach out if you’d like to collaborate—or just chat about new ideas.
         </p>
       </div>
       <div class="haii">
+        <!--
         <Button label="ello" variant="outlined" />
         <Button label="ello" severity="contrast" variant="text" />
+        -->
+
       </div>
     </div>
   </section>
 </template>
+<!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
-import { Button } from 'primevue';
 import { onMounted, onUnmounted } from 'vue';
 
 onMounted(() => {
@@ -110,5 +116,18 @@ p {
   justify-content: flex-start;
   justify-self: start;
   text-align: start;
+}
+.corner-image{
+  position:absolute;
+  bottom: -2rem;
+  left: -10rem;
+  z-index: 0;
+}
+.corner-image>p{
+  left: 10rem;
+  position: absolute;
+  top: -2rem;
+  color:rgba(255, 255, 255, 0.200);
+
 }
 </style>
