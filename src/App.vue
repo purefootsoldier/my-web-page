@@ -1,17 +1,20 @@
 <template>
-  <MyHeader/>
+  <MyHeader />
   <main>
-    <MyHero/>
-    <MySocial/>
-    <AboutMe/>
-    <MyProjects/>
-    <MyHobbies/>
+    <MyHero />
+    <MySocial />
+    <AboutMe />
+    <MyProjects />
+    <MyHobbies />
+    <ContactForm />
   </main>
-  <MyFooter/>
+  <MyFooter />
 
 </template>
 <!-- eslint-disable-next-line vue/block-lang -->
 <script setup>
+
+import ContactForm from "./components/sections/ContactForm.vue"
 import MyHero from './components/sections/MyHero.vue';
 import MyHeader from './components/global/MyHeader.vue';
 import MySocial from './components/sections/MySocials.vue';
